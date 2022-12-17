@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignTop="@+id/monthYearB"
+    android:visibility="visible"
+    android:background="@drawable/mainbackground"
+    tools:context=".SummaryActivity">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:itemBackground="@color/design_default_color_primary"
+        app:itemIconTint="@color/selector"
+        app:itemTextColor="@color/selector"
+        app:menu="@menu/menu_navigation" />
+
+
+    <Button
+        android:id="@+id/monthYearB"
+        android:layout_width="200dp"
+        android:layout_height="66dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/b1"
+        android:text="Change Month/Year"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <NumberPicker
+        android:id="@+id/picker_month"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottom_navigation"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="255dp"
+        android:layout_marginRight="255dp"
+        android:layout_marginBottom="438dp"
+        android:descendantFocusability="blocksDescendants"
+        android:visibility="invisible">
+
+    </NumberPicker>
+
+    <NumberPicker
+        android:id="@+id/picker_year"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottom_navigation"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="318dp"
+        android:layout_marginRight="318dp"
+        android:layout_marginBottom="438dp"
+        android:descendantFocusability="blocksDescendants"
+        android:visibility="invisible">
+
+    </NumberPicker>
+
+
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/piechart"
+        android:layout_width="356dp"
+        android:layout_height="600dp"
+        android:layout_above="@+id/bottom_navigation"
+        android:layout_below="@+id/monthYearB"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="84dp"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="345dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/monthYearB"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="34dp"
+        android:layout_marginLeft="34dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="7dp"
+        android:textColor="#121010"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+</RelativeLayout>
